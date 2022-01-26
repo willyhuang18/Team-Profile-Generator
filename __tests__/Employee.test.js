@@ -17,5 +17,11 @@ describe("Employee", ()=>{
             //using the getName method in the employee constructor
             expect(employee.getName()).toEqual(String);
         })
+        it("should create an object to get employee's ID", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com');
+
+            //using the getID method in the employee constructor
+            expect(employee.getId()).toEqual(Number);
+        })
     })
 })
