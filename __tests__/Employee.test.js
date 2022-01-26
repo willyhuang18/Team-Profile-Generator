@@ -10,7 +10,12 @@ describe("Employee", ()=>{
             expect(employee.name).toEqual(String);
             expect(employee.id).toEqual(Number);
             expect(employee.email).toEqual(String);
+        });
+        it("should create an object to get employee's name", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com');
 
+            //using the getName method in the employee constructor
+            expect(employee.getName()).toEqual(String);
         })
     })
 })
