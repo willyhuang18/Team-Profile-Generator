@@ -14,7 +14,7 @@ const teamArr = [];
 //create inquirer prompt for employee
 const employeePrompt = ()=>{
     console.log('Welcome to the team!');
-        inquirer.prompt([
+        return inquirer.prompt([
         {
             type: 'list',
             name: 'position',
@@ -115,7 +115,7 @@ const HTMLfile = (data)=>{
 //putting everything together
 employeePrompt()
 .then((data)=>{
-    return HTMLpage(data);
+    return HTMLpage(teamArr);
 })
 .then((Html)=>{
     return HTMLfile(Html);
