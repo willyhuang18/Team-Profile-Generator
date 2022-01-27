@@ -50,15 +50,17 @@ const employee = ()=>{
             message: "Please enter the employee's github username.",
             when: (input) => input.position === "Intern",
         },{
+            //add more member if user want to
             type: 'confirm',
             name: 'addEmployee',
             message: 'Do you want more team member?',
             default: false
         }
     ])
-    .then(Response =>{
+    .then(response =>{
         // This creates a constant with the name 'name, id, email, officeNumber'
-          //create new object to contain the constructor 
-
+        //create new object to contain the constructor 
+        const {name, id, email, position, officeNumber, github, school, addEmployee} = response;
+        const employee;
     })
 }
