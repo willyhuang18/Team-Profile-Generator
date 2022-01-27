@@ -1,4 +1,7 @@
 //creating the card to indicate what role are creating card for
+
+const { generate } = require("escodegen");
+
 //creating the card container for html inside JS
 const gManager = function (manager) {
     return `
@@ -118,3 +121,5 @@ const HTMLpage = (employeeData)=>{
     </html>
         `
 }
+//declare module exported to use in other files
+module.exports = generateHTML;
