@@ -2,11 +2,11 @@
 //creating the card container for html inside JS
 const gManager = function (manager) {
     return `
-    <div class="col">
+    <div class="col-4 mt-4">
         <div class="card">
             <div class="card-header">
                 <h1>${manager.name}</h1> 
-                <h2>Manager</h2>
+                <h2><i class="fas fa-mug-hot"></i>Manager</h2>
             </div>
             <div class="card-body">
                 <p>ID:${manager.id}</p>
@@ -20,11 +20,11 @@ const gManager = function (manager) {
 //create the Engineer card
 const gEngineer = function (engineer) {
     return `
-    <div class="col">
+    <div class="col-4 mt-4">
         <div class="card">
             <div class="card-header">
                 <h1>${engineer.name}</h1> 
-                <h2>Manager</h2>
+                <h2><i class="fas fa-glasses"></i>Engineer</h2>
             </div>
             <div class="card-body">
                 <p>ID:${engineer.id}</p>
@@ -38,11 +38,11 @@ const gEngineer = function (engineer) {
 //create the Intern card
 const gIntern = function (intern) {
     return `
-    <div class="col">
+    <div class="col-4 mt-4">
         <div class="card">
             <div class="card-header">
                 <h1>${intern.name}</h1> 
-                <h2>Manager</h2>
+                <h2><i class="fas fa-user-graduate"></i>Intern</h2>
             </div>
             <div class="card-body">
                 <p>ID:${intern.id}</p>

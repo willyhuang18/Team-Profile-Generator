@@ -4,3 +4,12 @@
 h1{
     font-family: 'Roboto', sans-serif;
 }
+.container {
+    margin: 100px auto;
+    justify-content: space-evenly;
+    display: flex;
+    
+}
+h2{
+    font-family: 'Lora', serif;
+}
