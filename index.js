@@ -62,5 +62,22 @@ const employee = ()=>{
         //create new object to contain the constructor 
         const {name, id, email, position, officeNumber, github, school, addEmployee} = response;
         const employee;
+        //declare switch() as condition
+        switch(position){
+            case 'Manager':
+                employee = new Manager(name, id, email, officeNumber);
+                break;
+            case 'Engineer':
+                employee = new Engineer(name, id, email, github);
+                break;
+            case 'Intern':
+                employee = new Intern(name, id, email, school);
+                break;
+            case 'addEmployee':
+                employee(addEmployee);
+                break;
+            default:
+                console.log('Please enter one position');
+        } 
     })
 }
