@@ -104,3 +104,13 @@ const HTMLfile = (data)=>{
     })
 }
 //putting everything together
+employee()
+.then((data)=>{
+    return HTMLpage(data);
+})
+.then((Html)=>{
+    return HTMLfile(Html);
+})
+.catch((err)=>{
+    console.log(err);
+})
