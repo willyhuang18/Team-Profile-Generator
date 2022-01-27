@@ -34,3 +34,21 @@ const gEngineer = function (engineer) {
     </div>
     `;
 }
+
+//create the Intern card
+const gIntern = function (intern) {
+    return `
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h1>${intern.name}</h1> 
+                <h2>Manager</h2>
+            </div>
+            <div class="card-body">
+                <p>ID:${intern.id}</p>
+                <p>Email:${intern.email}<a href="mailto:${intern.email}"></a></p>
+                <p>School :${intern.school}</p>
+            </div>
+    </div>
+    `;
+}
