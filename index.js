@@ -8,31 +8,38 @@ const Intern = require('./lib/Intern.js');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-//create inquirer prompt for manager
-const managerQA = ()=>{
-        inquirer.prompt([{
+//create inquirer prompt for employee
+const employee = ()=>{
+        inquirer.prompt([
+        {
+            type: 'list',
+            name: 'position',
+            message: "Please choose your employee's position",
+            choices: ['Manager','Engineer', 'Intern']
+        },
+        {
             type: "input",
             name: "name",
-            message: "What is the name for the manager in this team"
+            message: "What is the name for the employee in this team"
         },{
             type: "input",
             name: "id",
-            message: "Enter manager's ID Number: ",
+            message: "Enter employee's ID Number: ",
         },{
             type: "input",
             name: "email",
-            message: "Enter manager's email: ",
+            message: "Enter employee's email: ",
         },{
             type: "input",
             name: "officeNumber",
-            message: "Enter manager's office Number: ",
+            message: "Enter employee's office Number: ",
+            //use inquirer when method to indicate position
+            when:(input)=> input.position === 'Manager',
         }
     ])
     .then(managerAnswer =>{
         // This creates a constant with the name 'name, id, email, officeNumber'
-          const {name, id, email, officeNumber} = managerAnswer;
           //create new object to contain the constructor 
-          const manager = new Manager(name, id, email, officeNumber);
-          console.log(manager);
+
     })
 }
