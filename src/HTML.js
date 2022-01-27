@@ -54,7 +54,7 @@ const gIntern = function (intern) {
 }
 
 //putting everything together
-const generateHTML = (data) =>{
+const generateHTML = function (info){
     //create a empty array for the checking what character the user input
     const card = [];
 }
