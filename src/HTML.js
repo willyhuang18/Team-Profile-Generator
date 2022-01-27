@@ -57,4 +57,10 @@ const gIntern = function (intern) {
 const generateHTML = function (info){
     //create a empty array for the checking what character the user input
     const card = [];
+
+    //give for loop to loop for the input to check what character
+    for (let i = 0; i < info.length; i++) {
+        const cardInfo = info[i];
+        
+    }
 }
