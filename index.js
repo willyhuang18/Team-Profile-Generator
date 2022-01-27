@@ -41,13 +41,13 @@ const employee = ()=>{
             //adding github for engineer
             type: 'input',
             name: 'github',
-            message: "Please enter the employee's github username.",
+            message: "Please enter the employee's github username: ",
             when: (input) => input.position === "Engineer",
         },{
             //adding School for Intern
             type: 'input',
-            name: 'github',
-            message: "Please enter the employee's github username.",
+            name: 'school',
+            message: "Please enter the employee's school: ",
             when: (input) => input.position === "Intern",
         },{
             //add more member if user want to
@@ -79,5 +79,16 @@ const employee = ()=>{
             default:
                 console.log('Please enter one position');
         } 
+    })
+}
+
+//use file package to create a Html file
+const HTMLfile = (data)=>{
+    fs.writeFile('./dist/index.html', data, err =>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log('You had successfully create team profile!');
+        }
     })
 }
