@@ -1,3 +1,4 @@
+//creating the card to indicate what role are creating card for
 //creating the card container for html inside JS
 const generateManager = function (manager) {
     return `
@@ -15,3 +16,5 @@ const generateManager = function (manager) {
     </div>
     `;
 }
+
+//create the 
