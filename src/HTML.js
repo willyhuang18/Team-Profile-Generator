@@ -83,4 +83,7 @@ const generateHTML = function (info){
                 
         }
     }
+    //give a variable to contain the new Array
+    const employeeInfo = card.join('');
+    
 }
