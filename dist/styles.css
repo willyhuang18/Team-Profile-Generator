@@ -8,3 +8,11 @@ h1{
 h2{
     font-family: 'Lora', serif;
 }
+
+body{
+    background: #7f7fd5;
+    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  }
+  .container{
+      background-color: #1b8bbe;
+  }
