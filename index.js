@@ -73,7 +73,7 @@ const employeePrompt = ()=>{
                 if(addEmployee){
                     employeePrompt()
                 }else{
-                    return teamArr;
+                    HTMLfile(HTMLpage(teamArr))
                 }
                 break;
             case 'Engineer':
@@ -82,7 +82,8 @@ const employeePrompt = ()=>{
                 if(addEmployee){
                     employeePrompt()
                 }else{
-                    return teamArr;
+                    HTMLfile(HTMLpage(teamArr))
+
                 }
                 break;
             case 'Intern':
@@ -91,7 +92,8 @@ const employeePrompt = ()=>{
                 if(addEmployee){
                     employeePrompt()
                 }else{
-                    return teamArr;
+                    HTMLfile(HTMLpage(teamArr))
+
                 }
                 break;
             default:
@@ -114,12 +116,3 @@ const HTMLfile = (data)=>{
 }
 //putting everything together
 employeePrompt()
-.then((data)=>{
-    return HTMLpage(teamArr);
-})
-.then((Html)=>{
-    return HTMLfile(Html);
-})
-.catch((err)=>{
-    console.log(err);
-})
