@@ -11,5 +11,10 @@ describe("Engineer", ()=>{
             //using the jest expect.any(constructor) to allow any input
             expect(engineer.github).toEqual(expect.any(String));
         });
+        it("should create an object to get engineer's github", ()=>{
+            const engineer = new Engineer('Sara', 10, 'Sara.pro@yahoo.com','sarapro123');
+            //using the getGithub method in the engineer constructor
+            expect(engineer.getGithub()).toEqual(expect.any(String));
+        });
     });
 });
