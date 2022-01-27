@@ -83,11 +83,17 @@ const generateHTML = function (info){
                 const intern = gIntern(cardInfo);
                 card.push(intern);
                 console.log(card);
-                
+                break;
+            default:
+                console.log(`please enter valid character.`);     
         }
     }
     //give a variable to contain the new Array
     const employeeInfo = card.join('');
+
+    //make a return to the page
+    const team = HTMLpage(employeeInfo);
+    return team;
     
 }
 
