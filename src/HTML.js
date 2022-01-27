@@ -61,6 +61,26 @@ const generateHTML = function (info){
     //give for loop to loop for the input to check what character
     for (let i = 0; i < info.length; i++) {
         const cardInfo = info[i];
-        
+        const character = cardInfo.getCharacter();
+
+        //declare condition to check what character entering 
+        switch(character){
+            case 'Manager':
+                const manager = gManager(cardInfo);
+                //push the card info into array
+                card.push(manager);
+                console.log(card);
+                break;
+            case 'Engineer':
+                const engineer = gEngineer(cardInfo);
+                card.push(engineer);
+                console.log(card)
+                break;
+            case 'Intern':
+                const intern = gIntern(cardInfo);
+                card.push(intern);
+                console.log(card);
+                
+        }
     }
 }
