@@ -10,6 +10,7 @@ const inquirer = require('inquirer');
 
 //create inquirer prompt for employee
 const employee = ()=>{
+    console.log('Welcome to the team!');
         inquirer.prompt([
         {
             type: 'list',
@@ -30,11 +31,24 @@ const employee = ()=>{
             name: "email",
             message: "Enter employee's email: ",
         },{
+            //adding office number for manager
             type: "input",
             name: "officeNumber",
             message: "Enter employee's office Number: ",
             //use inquirer when method to indicate position
             when:(input)=> input.position === 'Manager',
+        },{
+            //adding github for engineer
+            type: 'input',
+            name: 'github',
+            message: "Please enter the employee's github username.",
+            when: (input) => input.position === "Engineer",
+        },{
+            //adding School for Intern
+            type: 'input',
+            name: 'github',
+            message: "Please enter the employee's github username.",
+            when: (input) => input.position === "Intern",
         }
     ])
     .then(managerAnswer =>{
