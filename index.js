@@ -8,6 +8,9 @@ const Intern = require('./lib/Intern.js');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+//make empty array to contain the employee info
+const team = [];
+
 //create inquirer prompt for employee
 const employee = ()=>{
     console.log('Welcome to the team!');
@@ -78,7 +81,11 @@ const employee = ()=>{
                 break;
             default:
                 console.log('Please enter one position');
-        } 
+        }
+        //push the user response into the array
+        team.push(employee);
+        console.log(employee);
+        console.log(team);
     })
 }
 
@@ -92,3 +99,4 @@ const HTMLfile = (data)=>{
         }
     })
 }
+//putting everything together
