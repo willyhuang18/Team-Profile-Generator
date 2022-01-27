@@ -30,5 +30,10 @@ describe("Employee", ()=>{
             //using the getEmail method in the employee constructor
             expect(employee.getEmail()).toEqual(expect.any(String));
         })
+        it("should create an object to get employee's position", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com');
+
+            expect(employee.getPosition()).toEqual("Employee");
+        })
     })
 })

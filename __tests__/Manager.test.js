@@ -11,5 +11,10 @@ describe("Manager", ()=>{
             //using the jest expect.any(constructor) to allow any input
             expect(manager.officeNumber).toEqual(expect.any(Number));
         });
+        it("should create an object to get employee's position", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com',101);
+
+            expect(employee.getPosition()).toEqual("Manager");
+        })
     });
 });

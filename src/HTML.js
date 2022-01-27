@@ -1,7 +1,4 @@
 //creating the card to indicate what role are creating card for
-
-const { generate } = require("escodegen");
-
 //creating the card container for html inside JS
 const gManager = function (manager) {
     return `
@@ -64,7 +61,7 @@ const generateHTML = function (info){
     //give for loop to loop for the input to check what character
     for (let i = 0; i < info.length; i++) {
         const cardInfo = info[i];
-        const character = cardInfo.getCharacter();
+        const character = cardInfo.getPosition();
 
         //declare condition to check what character entering 
         switch(character){

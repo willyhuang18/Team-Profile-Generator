@@ -16,5 +16,10 @@ describe("Engineer", ()=>{
             //using the getGithub method in the engineer constructor
             expect(engineer.getGithub()).toEqual(expect.any(String));
         });
+        it("should create an object to get employee's position", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com','sarapro123');
+
+            expect(employee.getPosition()).toEqual("Engineer");
+        })
     });
 });

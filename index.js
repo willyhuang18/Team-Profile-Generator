@@ -64,7 +64,7 @@ const employee = ()=>{
         // This creates a constant with the name 'name, id, email, officeNumber'
         //create new object to contain the constructor 
         const {name, id, email, position, officeNumber, github, school, addEmployee} = response;
-        const employee;
+        let employee;
         //declare switch() as condition
         switch(position){
             case 'Manager':

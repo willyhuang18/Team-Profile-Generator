@@ -16,5 +16,10 @@ describe("Intern", ()=>{
             //using the getSchool method in the Intern constructor
             expect(intern.getSchool()).toEqual(expect.any(String));
         });
+        it("should create an object to get employee's position", ()=>{
+            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com','Mission University');
+
+            expect(employee.getPosition()).toEqual("Intern");
+        })
     });
 });
