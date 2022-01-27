@@ -1,7 +1,7 @@
 //import the Intern constructor 
 const Intern = require('../lib/Intern');
 
-//making the new employee object 
+//making the new Intern object 
 describe("Intern", ()=>{
     describe("Initialization", ()=>{
         //since the employee had Id, and name
