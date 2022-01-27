@@ -49,9 +49,14 @@ const employee = ()=>{
             name: 'github',
             message: "Please enter the employee's github username.",
             when: (input) => input.position === "Intern",
+        },{
+            type: 'confirm',
+            name: 'addEmployee',
+            message: 'Do you want more team member?',
+            default: false
         }
     ])
-    .then(managerAnswer =>{
+    .then(Response =>{
         // This creates a constant with the name 'name, id, email, officeNumber'
           //create new object to contain the constructor 
 
