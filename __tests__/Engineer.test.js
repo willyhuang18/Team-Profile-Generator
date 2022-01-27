@@ -1,4 +1,4 @@
-//import the Employee constructor 
+//import the Engineer constructor 
 const Engineer = require('../lib/Engineer');
 
 //making the new employee object 
