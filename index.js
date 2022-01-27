@@ -12,7 +12,7 @@ const inquirer = require('inquirer');
 const teamArr = [];
 
 //create inquirer prompt for employee
-const employee = ()=>{
+const employeePrompt = ()=>{
     console.log('Welcome to the team!');
         inquirer.prompt([
         {
@@ -69,27 +69,36 @@ const employee = ()=>{
         switch(position){
             case 'Manager':
                 employee = new Manager(name, id, email, officeNumber);
-                break;
-            case 'Engineer':
-                employee = new Engineer(name, id, email, github);
-                break;
-            case 'Intern':
-                employee = new Intern(name, id, email, school);
-                break;
-            case 'addEmployee':
-                //declare condition if the user want to add more
+                teamArr.push(employee);
                 if(addEmployee){
-                    return employee(addEmployee);
+                    employeePrompt()
                 }else{
                     return teamArr;
                 }
+                break;
+            case 'Engineer':
+                employee = new Engineer(name, id, email, github);
+                teamArr.push(employee);
+                if(addEmployee){
+                    employeePrompt()
+                }else{
+                    return teamArr;
+                }
+                break;
+            case 'Intern':
+                employee = new Intern(name, id, email, school);
+                teamArr.push(employee);
+                if(addEmployee){
+                    employeePrompt()
+                }else{
+                    return teamArr;
+                }
+                break;
             default:
                 console.log('Please enter one position');
         }
         //push the user response into the array
-        teamArr.push(employee);
-        console.log(employee);
-        console.log(teamArr);
+
     })
 }
 
@@ -104,7 +113,7 @@ const HTMLfile = (data)=>{
     })
 }
 //putting everything together
-employee()
+employeePrompt()
 .then((data)=>{
     return HTMLpage(data);
 })
