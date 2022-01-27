@@ -9,7 +9,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //make empty array to contain the employee info
-const team = [];
+const teamArr = [];
 
 //create inquirer prompt for employee
 const employee = ()=>{
@@ -77,15 +77,19 @@ const employee = ()=>{
                 employee = new Intern(name, id, email, school);
                 break;
             case 'addEmployee':
-                employee(addEmployee);
-                break;
+                //declare condition if the user want to add more
+                if(addEmployee){
+                    return employee(addEmployee);
+                }else{
+                    return teamArr;
+                }
             default:
                 console.log('Please enter one position');
         }
         //push the user response into the array
-        team.push(employee);
+        teamArr.push(employee);
         console.log(employee);
-        console.log(team);
+        console.log(teamArr);
     })
 }
 
