@@ -17,7 +17,7 @@ describe("Intern", ()=>{
             expect(intern.getSchool()).toEqual(expect.any(String));
         });
         it("should create an object to get employee's position", ()=>{
-            const employee = new Employee('Sara', 10, 'Sara.pro@yahoo.com','Mission University');
+            const employee = new Intern('Sara', 10, 'Sara.pro@yahoo.com','Mission University');
 
             expect(employee.getPosition()).toEqual("Intern");
         })
