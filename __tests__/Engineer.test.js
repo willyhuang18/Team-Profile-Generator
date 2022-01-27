@@ -11,5 +11,5 @@ describe("Engineer", ()=>{
             //using the jest expect.any(constructor) to allow any input
             expect(engineer.github).toEqual(expect.any(String));
         });
-    })
-})
+    });
+});
