@@ -11,9 +11,9 @@ const gManager = function (manager) {
             <div class="card-body">
                 <div class ="card" style= "width: 18rem">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:${manager.id}</li>
-                        <li class="list-group-item">Email:<a href="mailto:${manager.email}">${manager.email}</a></li>
-                        <li class="list-group-item">Office Number:${manager.officeNumber}</li>
+                        <li class="list-group-item">ID: ${manager.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+                        <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
                     </ul>
                 </div>
             </div>
@@ -34,9 +34,9 @@ const gEngineer = function (engineer) {
             <div class="card-body">
                 <div class ="card" style= "width: 18rem">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:${engineer.id}</li>
-                        <li class="list-group-item">Email:<a href="mailto:${engineer.email}">${engineer.email}</a></li>
-                        <li class="list-group-item">Github:<a href="http://github.com/${engineer.github}">${engineer.github}</a></li>
+                        <li class="list-group-item">ID: ${engineer.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+                        <li class="list-group-item">Github: <a href="http://github.com/${engineer.github}">${engineer.github}</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,9 +57,9 @@ const gIntern = function (intern) {
             <div class="card-body">
                 <div class ="card" style= "width: 18rem">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:${intern.id}</li>
-                        <li class="list-group-item">Email:<a href="mailto:${intern.email}">${intern.email}</a></li>
-                        <li class="list-group-item">School :${intern.school}</li>
+                        <li class="list-group-item">ID: ${intern.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
+                        <li class="list-group-item">School: ${intern.school}</li>
                     </ul>
                 </div>
             </div>
