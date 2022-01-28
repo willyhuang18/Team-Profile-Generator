@@ -29,11 +29,20 @@ const employeePrompt = ()=>{
             type: "input",
             name: "id",
             message: "Enter employee's ID Number: ",
+            //using inquirer validate method
+            validate: (value) =>{
+                var pass = Number.isInteger(value)
+                if (pass) {
+                  return true;
+                }
+                return 'Please enter a valid  ID number';
+              }
         },{
             type: "input",
             name: "email",
             message: "Enter employee's email: ",
-            validate: email => {
+            //using inquirer validate method
+            validate: (email) => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 if (valid) {
                     return true;
@@ -49,6 +58,14 @@ const employeePrompt = ()=>{
             message: "Enter employee's office Number: ",
             //use inquirer when method to indicate position
             when:(input)=> input.position === 'Manager',
+            //using inquirer validate method
+            validate: (value) =>{
+                var pass = Number.isInteger(value)
+                if (pass) {
+                  return true;
+                }
+                return 'Please enter a valid  ID number';
+              }
         },{
             //adding github for engineer
             type: 'input',
