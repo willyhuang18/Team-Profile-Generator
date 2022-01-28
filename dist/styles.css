@@ -13,6 +13,7 @@ body{
     background: #7f7fd5;
     background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
   }
-  .container{
+
+  .card-header{
       background-color: #1b8bbe;
   }
