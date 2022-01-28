@@ -31,11 +31,12 @@ const employeePrompt = ()=>{
             message: "Enter employee's ID Number: ",
             //using inquirer validate method
             validate: (value) =>{
-                var pass = Number.isInteger(value)
-                if (pass) {
+                if (isNaN(value)) {
+                    console.log ('Please enter valid ID')
+                    return false; 
+                }else{
                   return true;
                 }
-                return 'Please enter a valid  ID number';
               }
         },{
             type: "input",
@@ -60,11 +61,12 @@ const employeePrompt = ()=>{
             when:(input)=> input.position === 'Manager',
             //using inquirer validate method
             validate: (value) =>{
-                var pass = Number.isInteger(value)
-                if (pass) {
+                if (isNaN(value)) {
+                    console.log ('Please enter valid ID')
+                    return false; 
+                }else{
                   return true;
                 }
-                return 'Please enter a valid  ID number';
               }
         },{
             //adding github for engineer
