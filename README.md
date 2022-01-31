@@ -33,7 +33,7 @@ This application contains the information about I had learn, and the work I have
 
 
 # Demo  
-[The walk-trough video] (https://drive.google.com/file/d/1zgcuv4stBPWI1BHxO0mQ44oBfjkW4jkn/view?usp=sharing)
+[The walk-trough video](https://drive.google.com/file/d/1zgcuv4stBPWI1BHxO0mQ44oBfjkW4jkn/view?usp=sharing)
 
 # Authors
 PangTa Huang
